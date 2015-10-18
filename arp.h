@@ -26,7 +26,7 @@
 #include <netinet/if_ether.h>
 #include <err.h>
 #include <pcap.h>
-#include <droid.h>
+#include <net/ethernet.h>
 
 #define BROADCAST_MAC_ADDR "\xff\xff\xff\xff\xff\xff"
 #define VOID_MAC_ADDR			 "\x00\x00\x00\x00\x00\x00"

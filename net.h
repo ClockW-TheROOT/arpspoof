@@ -26,7 +26,7 @@
 #include <netinet/if_ether.h>
 #include <err.h>
 #include <pcap.h>
-#include <droid.h>
+#include <net/ethernet.h>
 #include "hashmap.h"
 
 typedef struct
