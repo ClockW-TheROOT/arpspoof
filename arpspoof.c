@@ -120,6 +120,12 @@ int main(int argc, char *argv[])
 
 	if (argc != 1)
 		return 1;
+		
+	if( ( lnet = libnet_init(LIBNET_LINK, iface, libnet_ebuf) ) == NULL )
+	{
+		printf( "[ERROR] Unable to initialize libnet ( %s ).\n", libnet_ebuf );
+		return 1;
+	}
 
 	if( ( gateway_ip = libnet_name2addr4( lnet, argv[0], LIBNET_RESOLVE ) ) == -1 )
 	{
@@ -130,12 +136,6 @@ int main(int argc, char *argv[])
 	if( iface == NULL && (iface = pcap_lookupdev(pcap_ebuf)) == NULL )
 	{
 		printf( "[ERROR] Unable to lookup network interface ( %s ).\n", pcap_ebuf );
-		return 1;
-	}
-
-	if( ( lnet = libnet_init(LIBNET_LINK, iface, libnet_ebuf) ) == NULL )
-	{
-		printf( "[ERROR] Unable to initialize libnet ( %s ).\n", libnet_ebuf );
 		return 1;
 	}
 
