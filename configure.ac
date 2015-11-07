@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([arpspoof], [0.1], [https://github.com/cSploit/arpspoof/issues])
+AC_INIT([arpspoof], [0.2], [https://github.com/cSploit/arpspoof/issues])
 AC_CONFIG_SRCDIR([hashmap.h])
 AC_CONFIG_HEADERS([config.h])
 AM_INIT_AUTOMAKE([foreign])
